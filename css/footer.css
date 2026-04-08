@@ -1,0 +1,20 @@
+.page-footer {
+    background: var(--grd);
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    padding: 20px 15px;
+    border-top: 2px solid var(--border-color);
+    text-align: center;
+    justify-content: center;
+}
+
+#links1 {
+    flex-flow: column;
+    flex-direction: column;
+    max-width: 200px;
+}
+.page-footer p {
+    margin: 5px 0;
+}

@@ -1,0 +1,172 @@
+.page-header {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    max-width: 50%;
+    height: 100%;
+}
+
+.profile {
+    width: 125px;
+    height: 125px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page-header h1 {
+    font-size: 56px;
+    padding-left: 20px;
+    width: fit-content;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+
+
+
+#textoid {
+    font-size: 56px;
+    margin-top: 35px;
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    padding-right: 20px;
+    float: right;
+    width: 13%;
+    width:150px;
+    height: auto;
+    flex-direction: column;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 35px;
+    position: relative;
+    width: 200px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background: var(--footer-bg);
+    width: 155px;
+    height: 80px;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    border-radius: 34px;
+    border: 2px solid var(--border-color);
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 70px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 70px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+input:checked + .slider {
+    background: var(--footer-bg);
+}
+
+input:checked + .slider:before {
+    transform: translateX(100%);
+}
+
+.icon {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-60%);
+    font-size: 50px;
+    z-index: 1;
+}
+
+.sun {
+    left: 2px;
+    color: #333;
+}
+
+.moon {
+    right: 1px;
+    color: #ffe8d4;
+}
+
+input:checked + .slider .sun {
+    color: #ffe8d4;
+}
+
+input:checked + .slider .moon {
+    color: #333;
+}
+
+@media screen and (min-width:1024px) {
+    .page-header h1 {
+    font-size: 34px;
+    }
+
+    #textoid {
+        font-size: 26px;
+        margin-top: none;
+    }
+    .page-header {
+    height: 125px;
+    }
+
+    .slider {
+        height: 40px;
+        width: 72px;
+    }
+    .slider::before {
+        height: 30px;
+        width: 30px;
+    }
+
+    .theme-switch {
+        width:100px;
+        height: 10px;
+    }
+
+    .theme-switch-wrapper {
+        flex-direction: row;
+        margin-bottom: 6%;
+    }
+
+    .icon {
+        font-size: 22px;
+    }
+
+    .profile {
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    }
+
+    input:checked + .slider:before {
+    transform: translateX(100%);
+    }
+}

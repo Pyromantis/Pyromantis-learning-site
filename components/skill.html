@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="css/skill.css">
+<link rel="stylesheet" href="css/main.css">
+<article class="main-article">
+    <h2>Навыки, да?</h2>
+    <p><button id="example">Ну могу кнопку сделать</button></p>
+    <p>Или строку ввода<br><input type = "text" size = "40"></p>
+    <p>мама говорит что я <a href="https://ru.minecraft.wiki" target="_blank" id="text_like">особенный</a></p>
+    <div class="table-sup">
+        <table id="STS-table">
+            <thead>
+            <tr>
+                <th data-column="name">Имя карты</th>
+                <th data-column="char">Персонаж</th>
+                <th data-column="cost">Стоимость</th>
+                <th data-column="desc">Описание</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Удар эфесом</td>
+                <td>Латоносец</td>
+                <td>1</td>
+                <td>Наносит 9 урона. Вы добираете 1 карту</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="fidget_wrapper">
+        <div class="calculator">
+            <h2>Калькулятор онлайн от PyromantisINC©</h2>
+            <input type="text" id="display" readonly placeholder="2+2">
+            <div class="buttons">
+                    <button id="appender">7</button>
+                    <button id="appender">8</button>
+                    <button id="appender">9</button>
+                    <button id="appender">/</button>
+                    <button id="appender">4</button>
+                    <button id="appender">5</button>
+                    <button id="appender">6</button>
+                    <button id="appender">*</button>
+                    <button id="appender">1</button>
+                    <button id="appender">2</button>
+                    <button id="appender">3</button>
+                    <button id="appender">-</button>
+                    <button id="appender">0</button>
+                    <button id="appender">.</button>
+                    <button id="calculator">=</button>
+                    <button id="appender">+</button>
+                    <button id="clearer" class="clear">C</button>
+            </div>
+        </div>
+        <div class="converter">
+            <h2>Конвертер валют</h2>
+            <input type="number" min="1" placeholder="1" step="0.01" id="amount">
+            <select id="fromCurrency">
+                <option selected value="USD">USD</option>
+                <option value="RUB">RUB</option>
+                <option value="EUR">EUR</option>
+                <option value="GOLD">GOLD COIN</option>
+            </select>
+            <div>⇅</div>
+            <input id="result" readonly>
+            <select id="toCurrency">
+                <option value="USD">USD</option>
+                <option selected value="RUB">RUB</option>
+                <option value="EUR">EUR</option>
+                <option value="GOLD">GOLD COIN</option>
+            </select>
+        </div>
+        <script src="converter"></script>
+    </div>
+</article>

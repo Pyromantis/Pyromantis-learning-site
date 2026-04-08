@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/form.css">
+<article class="main-article">
+    <h2>Главное</h2>
+    <p>Ну тип я Алмаз Калимуллин делаю сайтик н-да</p>
+    <p>Хостить я конечно его <span class="spa">не буду</span> потому что не знаю как гыгыгы</p>
+    <p>Самое тяжёлое - рассказывать про себя, так что переходи к <strong><a href = "skills.html">следующему разделу</a></strong></p>
+    <blockquote>Не бойся лома - бойся вилки. Один удар - 4 дырки</blockquote>
+    <div>
+    <h2 id="about">
+        А теперь расскажи о себе
+    </h2>
+    <div>
+        <div>Ваше ФИО</div>
+        <input type="text" placeholder="Иванов Иван Иванович" id="fullname">
+        <div class="error-message" id="name-error">Бз-з-з-т! Ошибка! Только буквы и пробелы!</div>
+
+        <div>Номер телефона</div>
+        <input type="text" placeholder="89123966675" id="phone">
+        <div class="error-message" id="phone-error">Бз-з-з-т! Ошибка! Только цифры!</div>
+
+        <div>Дата</div>
+        <input type="date" id="date">
+        <div class="error-message" id="date-error">Бз-з-з-т! Ошибка! Дата не может быть раньше текущей!</div>
+
+        <div>Смешная картинка сюда</div>
+        <input type="file" id="photo" accept=".png,.jpg,.jpeg,.gif,.webp">
+        <div class="photo-preview">
+            <img id="preview-photo">
+            <p><button type="button" id="photo-delete">Удалить</button></p>
+        </div>
+        <div class="error-message" id="photo-error">Бз-з-з-т! Ошибка!</div>
+
+        <div id="form-preview">
+            <h2>Вот что получается:</h2>
+            <p>Фамилия: <span id="last-name"></span></p>
+            <p>Имя: <span id="first-name"></span></p>
+            <p>Отечество: <span id="otechestvo"></span></p>
+        </div>
+
+        <input type="submit" id="submit-button">
+
+        <div class="success-message" id="success-form">Making a note here: huge success!</div>
+        <script src="formComp2"></script>
+    </div>
+</article>

@@ -1,0 +1,15 @@
+body {
+    --bg-primary: #333;
+    --bg-secondary: #535353;
+    --nav-text: #333;
+    --text-primary: #ffe8d4;
+    --text-secondary: #333;
+    --border-color: #333;
+    --gradient-start: #ebb342;
+    --gradient-end: #ffe8d4;
+    --header-bg: #333;
+    --img-border: none;
+    --hover-bg: linear-gradient(to top, #333, #535353);
+    --footer-bg: linear-gradient(to bottom, #ebb342, #ffe8d4);
+    --grd: linear-gradient(to top, #ebb342, #ffe8d4);
+}

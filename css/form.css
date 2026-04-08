@@ -1,0 +1,64 @@
+.error-message {
+    color:white;
+    background-color: red;
+    display: none;
+}
+
+#name-error.show {
+    display: block;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.success-message {
+    color:white;
+    background-color: green;
+    display: none;
+}
+
+.success-message.show {
+    display: block;
+}
+
+#form-preview {
+    display: none;
+}
+
+#form-preview.show {
+    display: inline;
+}
+
+#preview-photo {
+    max-width: 250px;
+}
+
+#about{
+    margin-top: 20px;
+    border-top: 2px solid var(--border-color);
+}
+
+input {
+    height:70px;
+    width: auto;
+    font-size: 56px;
+}
+button {
+    height:70px;
+    width: auto;
+    font-size: 56px;
+}
+
+@media screen and (min-width:1023px) {
+    input {
+        height:25px;
+        width: auto;
+        font-size: 20px;
+    }
+    button {
+        height:25px;
+        width: auto;
+        font-size: 20px;
+    }
+}
