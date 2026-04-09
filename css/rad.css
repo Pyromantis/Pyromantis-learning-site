@@ -10,3 +10,7 @@
     width:45%;
     height:45%;
 }
+
+.picture.hide {
+    display: none;
+}

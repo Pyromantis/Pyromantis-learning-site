@@ -1,3 +1,5 @@
+import { Search } from "../utils/search.js";
+
 export class Rad {
     constructor(containerId) {
         this.containerId = containerId;
@@ -15,6 +17,7 @@ export class Rad {
         if (this.container) {
             this.container.innerHTML = this.htmlContent;
             this.render();
+            this.searchInit();
         }
         return true;
     }
@@ -29,5 +32,9 @@ export class Rad {
         if (this.container && this.htmlContent) {
             this.container.innerHTML = this.htmlContent;
         }
+    }
+
+    searchInit() {
+        Search();
     }
 }
