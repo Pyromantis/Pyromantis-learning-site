@@ -10,12 +10,19 @@ export function Search() {
         allCovers.push(pic.getAttribute('data-id'));
     })
     const uniqueCovers = [...new Set(allCovers)];
-    console.log(uniqueCovers);
-    console.log(filterItems(uniqueCovers,"ар"));
 
     const searchCover = document.getElementById('coverSearch');
     searchCover.addEventListener('input', function(e) {
+        pictures.forEach(pic => {
+        pic.style.display='block';
+        })
         const hiddenCovers = filterItems(uniqueCovers,e.target.value);
-        console.log(hiddenCovers);
+        hiddenCovers.forEach(pic => {
+            const picId = '[data-id="'+pic+'"]'
+            let picNeed = document.querySelectorAll(picId);
+            picNeed.forEach(pic2 => {
+                pic2.style.display = 'none';
+            })
+        })
     })
 }

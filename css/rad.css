@@ -1,7 +1,6 @@
 .covers {
     display: flex;
     flex-flow:wrap;
-    justify-content: center;
 }
 
 
@@ -11,6 +10,25 @@
     height:45%;
 }
 
-.picture.hide {
-    display: none;
+.coverWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+#coverSearch {
+    width:60%;
+    height: 100px;
+    font-size: 56px;
+    margin-left: 15%;
+}
+
+@media screen and (min-width:1024px)
+{
+    #coverSearch {
+        width:90%;
+        height:26px;
+        font-size: 20px;
+        margin-left: 0;
+    }
 }
