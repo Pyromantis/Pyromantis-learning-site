@@ -7,6 +7,7 @@ import { Nav } from '../pages/nav.js';
 import { Main } from '../pages/main.js';
 import { About } from '../pages/about.js';
 import { Skill } from '../pages/skill.js';
+import { Rad } from '../pages/rad.js';
 
 import { Switch } from '../utils/themeSwitcher.js';
 
@@ -15,7 +16,8 @@ let currentPage = null;
 const pageRegistry = {
     main: Main,
     about: About,
-    skill: Skill
+    skill: Skill,
+    rad: Rad
 };
 
 async function loadContent(pageName = 'main') {
@@ -72,6 +74,7 @@ async function initNavigation() {
         button.addEventListener('click', async (e) => {
             e.preventDefault();
             const page = button.dataset.page;
+            console.log(page);
             if (page) {
                 await loadContent(page);
             }

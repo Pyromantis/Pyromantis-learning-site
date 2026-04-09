@@ -1,0 +1,12 @@
+.covers {
+    display: flex;
+    flex-flow:wrap;
+    justify-content: center;
+}
+
+
+.covers img {
+    padding: 1%;
+    width:45%;
+    height:45%;
+}
