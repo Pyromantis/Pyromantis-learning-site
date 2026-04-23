@@ -19,7 +19,7 @@ export class HeaderComponent {
     }
 
     async toggleTheme() {
-        await this.themeCheckbox.click();
+        await this.themeSlider.click();
 
     }
 

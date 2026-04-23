@@ -20,11 +20,24 @@ export class MainPage extends BasePage {
     }
 
     async navigateTo(pageName) {
-        // Используем data-page из вашей навигации
-        await this.page.click(`button[data-page="${pageName}"]`);
-        // Ждем анимацию и загрузку контента
-        await this.page.waitForFunction((name) => {
-            return window.currentPage?.constructor?.name?.toLowerCase().includes(name);
-        }, pageName);
+    await this.page.click(`button[data-page="${pageName}"]`);
+    
+    // Ждем, пока в контенте появится ожидаемый текст/элемент
+    // вместо проверки window.currentPage
+    await this.page.waitForSelector(`[data-testid="main-content"]:has-text("${this.getExpectedText(pageName)}")`, {
+        timeout: 10000,
+        state: 'visible'
+    });
+    }
+
+    // Вспомогательный метод с ожидаемыми текстами для каждой страницы
+    getExpectedText(pageName) {
+        const texts = {
+            main: 'Главное',
+            about: 'А теперь расскажи о себе',
+            skill: 'Навыки, да?',
+            rad: ''
+        };
+        return texts[pageName] || '';
     }
 }
