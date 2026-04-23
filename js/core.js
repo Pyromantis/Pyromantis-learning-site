@@ -38,6 +38,8 @@ async function loadContent(pageName = 'main') {
             content.style.opacity = '1';
     }, 150);
         
+        window.dispatchEvent(new CustomEvent('pageLoaded', { detail: { page: pageName } }));
+
     } catch (error) {
         content.style.opacity = '1';
         console.error('Ошибка загрузки:', error);
@@ -86,12 +88,26 @@ async function Switcher() {
     Switch();
 }
 
+export function waitForAppReady() {
+    return new Promise((resolve) => {
+        if (document.getElementById('app-ready-flag')) {
+            resolve();
+        } else {
+            window.addEventListener('appReady', resolve, { once: true });
+        }
+    });
+}
+
 // Инициализация
 async function init() {
     await loadStaticParts();
     await initNavigation();
     await loadContent();
     await Switcher();
+
+    const flag = document.getElementById('app-ready-flag');
+    if (flag) flag.textContent = 'true';
+    window.dispatchEvent(new Event('appReady'));
 }
 
 init();
