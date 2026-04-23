@@ -35,4 +35,15 @@ test.describe('Тестирование главного приложения', 
         // Проверяем, что в контенте появилось что-то характерное для страницы About
         await expect(mainPage.mainContent).toContainText('Главное');
     });
+
+    test('Клик открывает новую страницу', async ({ page }) => {
+        const mainPage = new MainPage(page);
+        await mainPage.goto();
+        
+        // Кликаем по кнопке "About" (предполагаем, что data-page="about")
+        await mainPage.navigateTo('about');
+        
+        // Проверяем, что в контенте появилось что-то характерное для страницы About
+        await expect(mainPage.mainContent).toContainText('Главное');
+    });
 });

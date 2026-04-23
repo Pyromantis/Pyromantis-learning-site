@@ -1,14 +1,11 @@
 import { BasePage } from './BasePage';
 import { HeaderComponent } from './components/HeaderComponent';
-//import { FooterComponent } from './components/FooterComponent';
 
 export class MainPage extends BasePage {
     constructor(page) {
         super(page);
         // Внедряем компоненты (Композиция)
         this.header = new HeaderComponent(page);
-        // this.footer = new FooterComponent(page);
-        // this.sidebar = new SidebarComponent(page);
         
         // Локаторы основного контента
         this.mainContent = page.locator('[data-testid="main-content"]');
