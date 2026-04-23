@@ -1,18 +1,18 @@
 <link rel="stylesheet" href="css/header.css">
-<div class="page-header">
-    <div class="profile">
-        <img src="../static/usertile14.bmp" alt="Profile">
+<div class="page-header" data-testid="header-container">
+    <div class="profile" data-testid="profile-picture">
+        <img src="../static/usertile14.bmp" alt="Profile" data-testid="profile-img">
     </div>
-    <h1><span id="GreetUser"></span>
+    <h1><span id="GreetUser" data-testid="greeting-text"></span>
     </h1>
-    <div class="theme-switch-wrapper">
+    <div class="theme-switch-wrapper" data-testid="theme-switcher">
     <label class="theme-switch" for="checkbox">
-        <input type="checkbox" id="checkbox">
-        <div class="slider round">
-            <span class="icon sun">✨</span>
-            <span class="icon moon">🎃</span>
+        <input type="checkbox" id="checkbox" data-testid="theme-checkbox">
+        <div class="slider round" data-testid="theme-slider">
+            <span class="icon sun" data-testid="theme-sun">✨</span>
+            <span class="icon moon" data-testid="theme-moon">🎃</span>
         </div>
     </label>
-    <h2 id="textoid">Alt</h2>
+    <h2 id="textoid" data-testid="theme-alt-text">Alt</h2>
     </div>
 </div>
