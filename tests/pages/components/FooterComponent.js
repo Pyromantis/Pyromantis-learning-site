@@ -10,7 +10,6 @@ export class FooterComponent {
     }
 
     async clickExternalLink(linkLocator, expectedUrlPattern) {
-        // Универсальный метод для клика по внешней ссылке
         const context = this.page.context();
         
         const [newPage] = await Promise.all([
@@ -18,7 +17,6 @@ export class FooterComponent {
             linkLocator.click()
         ]);
         
-        // Ждем загрузки новой страницы
         await newPage.waitForLoadState('domcontentloaded');
         
         return newPage;

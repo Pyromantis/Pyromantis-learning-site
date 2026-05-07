@@ -13,7 +13,6 @@ export class HeaderComponent {
         this.altText = page.locator('[data-testid="theme-alt-text"]');
     }
 
-    // === ДЕЙСТВИЯ ===
     async getGreeting() {
         return await this.greetingText.textContent();
     }
